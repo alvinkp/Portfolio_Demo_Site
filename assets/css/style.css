@@ -10,10 +10,11 @@
 /* Body Styling */
 
 body {
-    max-width: 1300px;
-    margin: 0 auto;
     background-color: #344966;
+    width: 100%;
+    display: flex;
 }
+
 
 /* ---------------------------------------------- Header Styling ----------------------------------------------------------- */
 
@@ -120,6 +121,9 @@ main section p {
 #home {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #home h2 {
