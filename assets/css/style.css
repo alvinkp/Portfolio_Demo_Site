@@ -351,6 +351,18 @@ footer {
        font-size: calc(var(--my-p-font-size) - .75em); 
     }
 
+    .portfolio {
+        flex-direction: column;
+    }
+
+    #portfolio p {
+        font-size: 2em;
+    }
+    
+    .portfolio .mostRecentWork p {
+        font-size: 2em;
+    }
+
     footer {
         font-size: 18px;
         padding: 12px 0px;
