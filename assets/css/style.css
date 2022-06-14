@@ -572,6 +572,10 @@ footer {
 
 @media only screen and (min-width: 990px) and (max-width: 1400px) and (orientation: landscape) {
 
+    .box-styling{
+        font-size: 1.25em;
+    }
+
     header {
         position: fixed;
         top: 0;
@@ -610,9 +614,14 @@ footer {
     }
 
     main section {
-        padding-top: calc(var(--my-screen-padding) * .75);
+        padding-top: calc(var(--my-screen-padding) - 11em);
         padding-left: 30em;
         padding-right: 5em;
+    }
+
+    main section h2 {
+        padding-top: 10px;
+        font-size: calc(var(--my-h2-font-size) + 1em);
     }
 
     main section:last-child {
@@ -621,6 +630,27 @@ footer {
     
     main section p {
        font-size: calc(var(--my-p-font-size) * .75); 
+    }
+
+    .portfolio {
+        flex-direction: column;
+    }
+
+    #portfolio h2 {
+        padding-bottom: 2px;
+    }
+
+    #portfolio p {
+        font-size: 1.5em;
+    }
+    
+    .portfolio .mostRecentWork p {
+        font-size: 2em;
+    }
+
+    .contact{
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     footer {
