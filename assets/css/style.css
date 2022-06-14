@@ -115,6 +115,46 @@ main section p {
     margin: 10px 0px;
 }
 
+/* ------------------------ Home Specific Styling ------------------------------------ */
+
+#home {
+    display: flex;
+    align-items: center;
+}
+
+#home h2 {
+    padding-bottom: .5%;
+}
+
+/* ------------------------ About Me Specific Styling ------------------------------------ */
+
+#about {
+    display: flex;
+    align-items: center;
+}
+
+#about h2 {
+    padding-bottom: .5%;
+}
+
+.box-styling {
+    max-width: 75%;
+    background-color: #0d1821;
+    padding: 1em;
+    font-size: .8em;
+    border-radius: .75em;
+}
+
+.box-styling p {
+    padding-top: .5em;
+    text-align: left;
+}
+
+.about-contact-link-color {
+    color:#bfcc94;
+    font-weight: bolder;
+}
+
 /* ------------------------ Portfolio Specific Styling ------------------------------------ */
 
 .portfolio {
@@ -211,8 +251,13 @@ main section p {
 
 /* ------------------------ Contact Me Styling ------------------------------------ */
 
+.contact{
+    padding-top: 30%;
+}
+
 .contact-div{
     background-color:#0d1821;
+    border-radius: 0px 0px .75em .75em;
     padding: 2em;
     font-family: 'Arvo',Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -220,6 +265,7 @@ main section p {
 .contact p {
     font-size: 2em;
     background-color: #E6AACE;
+    border-radius: .35em .35em 0px 0px;
     color: #0d1821;
     margin: 0%;
 }
@@ -523,7 +569,7 @@ footer {
     }
 
     main section:last-child {
-        padding-bottom: calc(var(--my-screen-padding) + 2em);
+        padding-bottom: calc(var(--my-screen-padding) + 1em);
     }
 
     main section h2 {
