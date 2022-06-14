@@ -209,6 +209,30 @@ main section p {
     pointer-events: none;
 }
 
+/* ------------------------ Contact Me Styling ------------------------------------ */
+
+.contact-div{
+    background-color:#E6AACE;
+    padding: 2em;
+}
+
+.contact p {
+    font-size: 2em;
+    background-color: #0d1821;
+    margin: 0%;
+}
+
+.contact ul {
+    list-style: none;
+    /* text-align: center; */
+    font-family: 'Arvo',Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    }
+
+.contact a{
+    color:#0d1821;
+}
 
 /* ------------------------ Footer Styling ------------------------------------ */
 
@@ -507,8 +531,7 @@ footer {
     }
 
     footer {
-        font-size: 14px;
-        padding: 7px 0px 7px .5em;
+        font-size: 1em;
         left: 0;
         right: unset;
         text-align: center;
