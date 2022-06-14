@@ -1,5 +1,5 @@
 /* CSS Variables */
-:root{
+:root {
     --my-screen-padding: 20em;
     --my-h1-font-size: 4em;
     --my-nav-font-size: 1.5em;
@@ -9,25 +9,21 @@
 
 /* Body Styling */
 
-body::-webkit-scrollbar {
-    display:none; /* Hide scroll bars for Chrome */
-    -ms-overflow-style: none;  /* Hide scroll bars for IE and Edge */
-    scrollbar-width: none;  /* Hide scroll bars for Firefox */
-    scroll-behavior: smooth;
-}
-
-body{
-    overflow: hidden; /* Disable scrolling */
+body {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #344966;
 }
 
 /* ---------------------------------------------- Header Styling ----------------------------------------------------------- */
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #bfcc94;
+    z-index: 1;
 }
 
 header section {
@@ -52,7 +48,7 @@ header section img {
     background-color: #f0f4ef;
 }
 
-header nav{
+header nav {
     display: flex;
     justify-content:flex-start;
 }
@@ -82,7 +78,7 @@ a {
 
 /* -------------------------------- Main Styling ---------------------------------------------------- */
 
-main{
+main {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -92,22 +88,26 @@ main{
     justify-content:space-evenly;
 }
 
-main section{
+main section {
     padding-top: var(--my-screen-padding);
     padding-left: 10px;
     padding-right: 10px;
+}
+
+main section:last-child {
     padding-bottom: var(--my-screen-padding);
 }
 
-main section h2{
+main section h2 {
     font-family: 'Pacifico','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: var(--my-h2-font-size);
     color: #f0f4ef;
     text-align: center;
-    text-shadow: 3px 3px #0d1821;
+    text-shadow: 5px 5px #0d1821;
+    padding-bottom: 1em;
 }
 
-main section p{
+main section p {
     text-align: center;
     color: #f0f4ef;
     font-family: 'Arvo', Verdana, Geneva, Tahoma, sans-serif;
@@ -115,9 +115,104 @@ main section p{
     margin: 10px 0px;
 }
 
+/* ------------------------ Portfolio Specific Styling ------------------------------------ */
+
+.portfolio {
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    align-items: center;
+}
+
+.portfolio p, h2 {
+    flex-direction: column;
+    width: 100%;
+}
+
+.portfolio .mostRecentWork {
+    padding: 0%;
+    position: relative;
+}
+
+.portfolio img {
+    border: #0d1821;
+    border-style: solid;
+    border-width: 1em;
+}
+
+.portfolio .mostRecentWork p {
+    color:#0d1821;
+    background-color:#E6AACE;
+    font-family: 'Pacifico','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4em;
+    padding: .5em;
+    margin: 0px;
+}
+
+.portfolio .mostRecentWork p:last-child {
+    font-family: 'Comfortaa','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    padding-top:0%;
+}
+
+.portfolio .other-work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 1em 3em 1em 3em;
+    flex-wrap: wrap;
+}
+
+.portfolio .other-work img {
+    justify-self: center;
+    width: 29.8em;
+    border:#0d1821;
+    border-width: 1em;
+    border-style:solid;
+    margin-top: 2em;
+}
+
+.portfolio .previous-work {
+    padding: 0%;
+    position: relative;
+}
+
+.portfolio .previous-work p {
+    color:#0d1821;
+    background-color:#E6AACE;
+    font-family: 'Pacifico','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    padding: .30em;
+    margin: 0px;
+}
+
+.portfolio .previous-work p:last-child {
+    font-family: 'Comfortaa','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    padding-top:0%;
+}
+
+/* ------------------------ text-box Styling ------------------------------------ */
+
+.text-box {
+    position: absolute;
+    bottom: 5em;
+    box-shadow: 1em 1.75em #0d1821;
+    pointer-events: none;
+}
+
+.portfolio .other-work .text-box {
+    position: absolute;
+    bottom: 2.5em;
+    box-shadow: .5em .75em #0d1821;
+    pointer-events: none;
+}
+
+
 /* ------------------------ Footer Styling ------------------------------------ */
 
-footer{
+footer {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -128,27 +223,28 @@ footer{
     font-size: 18px;
     width: 100%;
     background-color: #bfcc94;
+    z-index: 2;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- For Mobile Displays (PORTRAIT) ----------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
-@media only screen and (max-width: 600px) and (orientation: portrait){
+@media only screen and (max-width: 600px) and (orientation: portrait) {
     
-    header section h1{
+    header section h1 {
         font-size: calc(var(--my-h1-font-size) - 1.5em);
     }
 
-    header section img{
+    header section img {
         width: 100px;
     }
 
-    header nav{
+    header nav {
         justify-content: center;
     }
 
-    header nav ul{
+    header nav ul {
         font-size: calc(var(--my-nav-font-size) - .25em);
         width: 100%;
         display: flex;
@@ -161,11 +257,11 @@ footer{
         padding-bottom: 5px;
     }
     
-    main section p{
+    main section p {
        font-size: calc(var(--my-p-font-size) - .75em); 
     }
 
-    footer{
+    footer {
         font-size: 12px;
         padding: 12px 0px;
     }
@@ -175,9 +271,9 @@ footer{
 /*------------------------------------------- For Mobile Displays (LANDSCAPE) ---------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
-@media only screen and (max-width: 920px) and (orientation: landscape){
+@media only screen and (max-width: 920px) and (orientation: landscape) {
     
-    header{
+    header {
         position: fixed;
         top: 0;
         left: 0;
@@ -190,20 +286,20 @@ footer{
         align-items: center;
         }
 
-    header section h1{
+    header section h1 {
         font-size: calc(var(--my-h1-font-size) - 2.25em);
         width: 100%;
     }
 
-    header section img{
+    header section img {
         width: 75px;
     }
 
-    header nav{
+    header nav {
         padding-top: 15%;
     }
 
-    header nav ul{
+    header nav ul {
         font-size: calc(var(--my-nav-font-size) - .25em);
         width: 100%;
     }
@@ -214,18 +310,21 @@ footer{
         padding-bottom: 5px;
     }
 
-    main section{
+    main section {
         padding-top: calc(var(--my-screen-padding) * .2);
         padding-left: 15em;
         padding-right: 1em;
+    }
+
+    main section:last-child {
         padding-bottom: calc(var(--my-screen-padding) * .2);
     }
     
-    main section p{
+    main section p {
        font-size: calc(var(--my-p-font-size) * .5); 
     }
 
-    footer{
+    footer {
         font-size: 8px;
         padding: 6px 0px 6px 6px;
         left: 0;
@@ -265,10 +364,14 @@ footer{
         padding-bottom: 5px;
     }
 
-    main section{
+    main section {
         padding-top: calc(var(--my-screen-padding) + 6em);
         padding-left: 50px;
         padding-right: 50px;
+    }
+
+    
+    main section:last-child {
         padding-bottom: calc(var(--my-screen-padding) + 6em);
     }
     
@@ -289,7 +392,7 @@ footer{
 
 @media only screen and (min-width: 990px) and (max-width: 1400px) and (orientation: landscape) {
 
-    header{
+    header {
         position: fixed;
         top: 0;
         left: 0;
@@ -302,20 +405,20 @@ footer{
         align-items: center;
         }
 
-    header section h1{
+    header section h1 {
         font-size: calc(var(--my-h1-font-size) - 1em);
         width: 100%;
     }
 
-    header section img{
+    header section img {
         width: 125px;
     }
 
-    header nav{
+    header nav {
         padding-top: 20%;
     }
 
-    header nav ul{
+    header nav ul {
         font-size: calc(var(--my-nav-font-size) + .5em);
         width: 100%;
     }
@@ -326,18 +429,21 @@ footer{
         padding-bottom: 5px;
     }
 
-    main section{
+    main section {
         padding-top: calc(var(--my-screen-padding) * .75);
         padding-left: 30em;
         padding-right: 5em;
+    }
+
+    main section:last-child {
         padding-bottom: calc(var(--my-screen-padding) * .75);
     }
     
-    main section p{
+    main section p {
        font-size: calc(var(--my-p-font-size) * .75); 
     }
 
-    footer{
+    footer {
         font-size: 14px;
         padding: 7px 0px 7px .5em;
         left: 0;
@@ -354,22 +460,22 @@ footer{
 
 @media only screen and (min-width: 1500px) {
 
-    header section h1{
+    header section h1 {
         font-size: var(--my-h1-font-size);
         width: 100%;
         flex-direction: row;
     }
 
-    header section img{
+    header section img {
         width: 200px;
     }
 
-    header nav{
+    header nav {
         justify-content: center;
         align-items: center;
     }
 
-    header nav ul{
+    header nav ul {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -381,23 +487,26 @@ footer{
         padding-bottom: 5px;
     }
 
-    main section{
+    main section {
         flex-direction: column;
         padding-top: calc(var(--my-screen-padding) + 5.5em);
         padding-left: 5em;
         padding-right: 5em;
-        padding-bottom: calc(var(--my-screen-padding) + 5.5em);
     }
 
-    main section h2{
+    main section:last-child {
+        padding-bottom: calc(var(--my-screen-padding) + 2em);
+    }
+
+    main section h2 {
         font-size: calc(var(--my-h2-font-size) + 2em);
     }
     
-    main section p{
+    main section p {
        font-size: var(--my-p-font-size); 
     }
 
-    footer{
+    footer {
         font-size: 14px;
         padding: 7px 0px 7px .5em;
         left: 0;
