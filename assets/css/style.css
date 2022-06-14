@@ -446,7 +446,7 @@ footer {
 /*------------------------------------------- For Mobile Displays (LANDSCAPE) ---------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
-@media only screen and (max-width: 920px) and (orientation: landscape) {
+@media only screen and (max-width: 989px) and (orientation: landscape) {
     
     .box-styling{
         font-size: 1.25em;
@@ -569,7 +569,7 @@ footer {
 /*-------------------------------------------------- For Tablet Sized Displays (PORTRAIT) ---------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
 
-@media only screen and (min-width: 601px) and (max-width: 991px) and (orientation: portrait) {
+@media only screen and (min-width: 601px) and (max-width: 1499px) and (orientation: portrait) {
     
     .box-styling{
         font-size: 1.25em;
