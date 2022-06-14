@@ -354,7 +354,6 @@ footer {
     }
 
     main section {
-        /* flex-direction: column; */
         padding-top: calc(var(--my-screen-padding) + 10px);
         padding-left: 10px;
         padding-right: 10px;
@@ -367,7 +366,7 @@ footer {
     }
 
     main section:last-child {
-        padding-bottom: calc(var(--my-screen-padding) - 50px);
+        padding-bottom: 75px;
     }
     
     main section p {
@@ -658,7 +657,7 @@ footer {
 /*------------------------------------------------- For Tablet Sized Displays (Landscape) ---------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
 
-@media only screen and (min-width: 990px) and (max-width: 1400px) and (orientation: landscape) {
+@media only screen and (min-width: 990px) and (max-width: 1499px) and (orientation: landscape) {
 
     .box-styling{
         font-size: 1.25em;
