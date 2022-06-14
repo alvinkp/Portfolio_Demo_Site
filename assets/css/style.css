@@ -135,6 +135,9 @@ main section p {
 #about {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #about h2 {
